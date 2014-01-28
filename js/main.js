@@ -6,8 +6,8 @@ function InvoiceController($scope) {
   var sample_invoice = {
             tax: 21.00,
             invoice_number: 1100000001,
-            customer_info:  {name: "Mr. John Doe", web_link: "John Doe Designs Inc.", address1: "1 Infinite Loop", address2: "Cupertino, California, US", postal: "90210"},
-            company_info:  {name: "Green Wellness", web_link: "https://www.greenwellness.nl", address1: "NS Plein 65, gebouw 88", address2: "Tilburg, The Netherlands", postal: "5014 DC"},
+            customer_info:  {name: "Wellness Basic", web_link: "www.wellnessbasics.nl", address1: "'s Gravelandseweg 59", address2: "Hilversum, The Netherlands", postal: "1217 EH"},
+            company_info:  {name: "Green Wellness", web_link: "www.greenwellness.nl", address1: "NS Plein 65, gebouw 88", address2: "Tilburg, The Netherlands", postal: "5014 DC"},
               items:[ {qty:10, description:'Wellnessbonnen', cost:10.00}]};
 
   if(localStorage["invoice"] == "" || localStorage["invoice"] == null){
