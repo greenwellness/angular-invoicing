@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
@@ -67,6 +68,83 @@
           <th>Prijs</th>
           <th style="text-align:right;">Totaal</th>
 
+<<<<<<< HEAD
+   ga('create', 'UA-23971072-2', 'metaware.github.io');
+   ga('send', 'pageview');
+  </script>
+</head>
+<body ng:app="jqanim" ng:controller="InvoiceController" >
+  <div id="css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+  </div>
+<div class="container" width="800px" id="invoice" >
+  <a ng-hide="printMode" href="https://github.com/metaware/angular-invoicing"><img ng-hide="printMode" style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+  <table class="table">
+    <tr>
+      <td align="center" style="background-color:#357EBD;color:#FFF" colspan="2">
+        INVOICE
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4>Invoice #<input type="text" id="invoice_number" ng-model="invoice.invoice_number" /></h4>
+      </td>
+      <td align="right">
+        <input type="file" id="imgInp" />
+        <img ng-hide="logoRemoved" id="company_logo" src="{{ logo }}" alt="your image" width="300" />
+        <br/>
+        <div class="noPrint" ng-hide="printMode">
+          <a ng-click="editLogo()" href >Edit Logo</a>
+          <a ng-click="removeLogo()" id="remove_logo" href >Remove logo</a>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table class="table">
+    <tr>
+      <td>
+        <div class="infos">
+          <div><strong><input type="text" ng-model="invoice.customer_info.name"/></strong></div>
+          <div><input type="text" ng-model="invoice.customer_info.web_link"/></div>
+          <div><input type="text" ng-model="invoice.customer_info.address1"/></div>
+          <div><input type="text" ng-model="invoice.customer_info.address2"/></div>
+          <div><input type="text" ng-model="invoice.customer_info.postal"/></div>
+        </div>
+      </td>
+      <td align="right">
+        <div class="align-right">
+          <div><strong><input type="text" ng-model="invoice.company_info.name"/></strong></div>
+          <div><input type="text" ng-model="invoice.company_info.web_link"/></div>
+          <div><input type="text" ng-model="invoice.company_info.address1"/></div>
+          <div><input type="text" ng-model="invoice.company_info.address2"/></div>
+          <div><input type="text" ng-model="invoice.company_info.postal"/></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table class="table table-striped" align="center" >
+      <tr>
+          <th></th>
+          <th>Description</th>
+          <th>Qty</th>
+          <th>Cost</th>
+          <th style="text-align:right;">Total</th>
+
+      </tr>
+      <tr ng:repeat="item in invoice.items" style="display: none" jq:animate="dropdown;250">
+          <td><a href ng-hide="printMode" ng-click="removeItem(item)" class="btn btn-danger">[X]</a></td>
+          <td><input ng:model="item.description" placeholder="Description"></td>
+          <td><input ng:model="item.qty" value="1" size="4" ng:required ng:validate="integer" placeholder="qty"></td>
+          <td><input ng:model="item.cost" value="0.00" ng:required ng:validate="number" size="6" placeholder="cost"></td>
+          <td align="right">{{item.cost * item.qty | currency}}</td>
+
+      </tr>
+      <tr ng-hide="printMode">
+          <td colspan="5"><a class="btn btn-primary" href ng:click="addItem()" >Add Item</a></td>
+      </tr>
+      <tr>
+=======
         </tr>
         <tr ng:repeat="item in invoice.items" style="display: none" jq:animate="dropdown;250">
           <td><a href ng-hide="printMode" ng-click="removeItem(item)" class="btn btn-danger"><i class="fa fa-minus-square"></i></a></td>
@@ -80,6 +158,7 @@
           <td colspan="5"><a class="btn btn-primary" href ng:click="addItem()" ><i class="fa fa-plus-square"></i> Regel toevoegen</a></td>
         </tr>
         <tr>
+>>>>>>> i18n/nl_NL
           <td colspan="4" align="right">
             Subtotaal
           </td>
@@ -112,9 +191,20 @@
       </div>
     </div>
 
+<<<<<<< HEAD
+<div ng-hide="printMode" class="copy noPrint">
+  <a href="http://jasdeep.ca/?utm_source=angular_invoicing">Jasdeep Singh</a> &
+  <a href="http://github.com/manpreetrules">Manpreet Singh</a>
+  Made with
+  <span class="love">&#9829;</span> in Toronto by
+  <a href="http://metawarelabs.com/?utm_source=angular_invoicing">Metaware Labs Inc.</a>
+</div>
+</body>
+=======
     <div ng-hide="printMode" class="copy noPrint">
       <a href="http://jasdeep.ca/?utm_source=angular_invoicing">Jasdeep Singh</a> &amp; <a href="http://github.com/manpreetrules">Manpreet Singh</a>
       Made with <span class="love">&#9829;</span> in Toronto by <a href="http://metawarelabs.com/?utm_source=angular_invoicing">Metaware Labs Inc.</a>
     </div>
   </body>
+>>>>>>> i18n/nl_NL
 </html>

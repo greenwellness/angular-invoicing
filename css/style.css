@@ -2,19 +2,17 @@ input, textarea{
   border: 1px solid #FFF;
 }
 
-.container input:hover, .container textarea:hover, 
+.container input:hover, .container textarea:hover,
 .table-striped > tbody > tr:nth-child(2n+1) > td input:hover,
-.container input:focus, .container textarea:focus, 
-.table-striped > tbody > tr:nth-child(2n+1) > td input:focus{
+.container input:focus, .container textarea:focus,
+.table-striped > tbody > tr:nth-child(2n+1) > td input:focus {
   border: 1px solid #CCC;
 }
 
-.table-striped > tbody > tr:nth-child(2n+1) > td input{
+.table-striped > tbody > tr:nth-child(2n+1) > td input {
     background-color: #F9F9F9;
     border: 1px solid #F9F9F9;
 }
-
-
 
 @media print {
     .noPrint {
@@ -24,6 +22,33 @@ input, textarea{
 
 body{
   padding:20px;
+}
+
+a.logoctl:link, a.logoctl:active, a.logoctl:visited {
+  font-size: small;
+  color: #8ab231;
+}
+
+a.logoctl:hover {
+  color: red;
+}
+
+a.btn.btn-primary:link,
+a.btn.btn-primary:active,
+a.btn.btn-primary:visited {
+  background-color: #8ab231;
+  border-color: #597A0D;
+}
+
+a.btn.btn-primary:hover {
+  border-color: #8ab231;
+  background-color: #BED883;
+}
+
+
+.title {
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .infos input{
